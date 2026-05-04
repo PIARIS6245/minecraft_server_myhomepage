@@ -105,3 +105,33 @@ footer {
   padding: 20px;
   color: rgba(255,255,255,0.7);
 }
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* スマホ最適化 */
+@media (max-width: 767px) {
+
+  .hero {
+    height: 85vh; /* 少し詰める */
+  }
+
+  h1 {
+    font-size: 42px; /* 小さく */
+  }
+
+  .catch {
+    font-size: 16px;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+}
