@@ -1,0 +1,107 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  height: 100vh; /* 画面中央に */
+  padding: 0 20px;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+
+  background: url("top.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* 🔥 全体に暗めグラデーション */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.6) 0%,
+    rgba(0,0,0,0.4) 40%,
+    rgba(0,0,0,0.8) 100%
+  );
+  z-index: -1;
+}
+
+/* 🔥 タイトル強化 */
+h1 {
+  font-size: 64px;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* サブテキスト */
+.catch {
+  padding: 15px;
+  font-size: 20px;
+  opacity: 0.9;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+/* 🔥 ボタン */
+.btn {
+  padding: 12px 24px;
+  margin: 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(0,255,150,0.6);
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: rgba(0,255,150,0.3);
+}
+
+.btn.main {
+  background: rgba(0,180,100,0.7);
+}
+
+/* 🔥 セクション（ここが一番重要） */
+section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+
+  /* 軽くする */
+  background: rgba(0, 0, 0, 0.35);
+
+  /* ぼかし弱め */
+  backdrop-filter: blur(4px);
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+/* 見出し */
+h2 {
+  border-left: 4px solid #00ff99;
+  padding-left: 10px;
+}
+
+/* ルール警告 */
+.warn {
+  color: #ff6666;
+}
+footer {
+  text-align: center;
+
+  max-width: 800px;
+  margin: 40px auto; /* 中央寄せ */
+
+  padding: 20px;
+  color: rgba(255,255,255,0.7);
+}
